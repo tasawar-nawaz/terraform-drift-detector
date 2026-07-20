@@ -1,0 +1,43 @@
+state:
+  path: tests/fixtures/sample.tfstate
+  backend: local
+
+aws:
+  enabled: true
+  region: us-east-1
+
+azure:
+  enabled: false
+  subscription_id: ""
+
+gcp:
+  enabled: false
+  project_id: ""
+
+scan:
+  workspace: demo
+  resource_types:
+    - aws_instance
+    - aws_s3_bucket
+    - aws_security_group
+  ignore_tag_keys: []
+  compare_attributes: true
+  comparison:
+    profile: default
+    ignore_attribute_paths: []
+
+storage:
+  database: drift.db
+
+server:
+  host: 127.0.0.1
+  port: 8080
+  api_key: ""
+
+schedule:
+  enabled: false
+  cron: "0 * * * *"
+
+webhooks: []
+#  - url: https://example.com/hooks/drift
+#    on_drift_only: true
