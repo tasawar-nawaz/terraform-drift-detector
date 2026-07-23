@@ -66,3 +66,4 @@ pytest
 - `0` — no drift
 - `1` — fetch/config errors
 - `2` — drift detected (`--fail-on-drift`, default)
+.............................................................
